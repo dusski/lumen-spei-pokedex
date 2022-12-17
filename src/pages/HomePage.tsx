@@ -1,10 +1,10 @@
 
-function Home() {
+function HomePage() {
   return (
     <>
-      <p>home works!</p>
+      <p>HomePage works!</p>
     </>
   )
 }
 
-export default Home
+export default HomePage
