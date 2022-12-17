@@ -1,10 +1,13 @@
 import Header from '../components/Header';
+import RegisterForm from '../components/register-form/RegisterForm';
 
 function RegisterPage() {
   return (
     <>
       <Header></Header>
-      <p>RegisterPage works!</p>
+      <div className={'d-flex justify-content-center align-items-center '}>
+        <RegisterForm></RegisterForm>
+      </div>
     </>
   )
 }

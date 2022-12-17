@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container'
 
 function App() {
   return (
-      <main className="App">
+      // <main className="App">
         <Container fluid>
           <Outlet />
         </Container>
-      </main>
+      // </main>
   )
 }
 
