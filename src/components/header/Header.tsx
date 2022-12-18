@@ -27,14 +27,14 @@ function Header() {
           React-Bootstrap
         </Navbar.Brand>
         <Nav className="me-auto">
-          <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link' : 'nav-link active')}>
+          {/* <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-link' : 'nav-link active')}>
             Home
           </NavLink>
           <NavLink
             to="/register"
             className={({ isActive }) => (isActive ? 'nav-link' : 'nav-link active')}>
             Register
-          </NavLink>
+          </NavLink> */}
         </Nav>
         {isUserAuthenticated && (
           <Nav className="justify-content-end align-items-center">
