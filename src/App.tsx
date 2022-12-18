@@ -1,15 +1,20 @@
-import { Outlet } from "react-router-dom"
+import React, { useEffect, useMemo, useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import './App.scss'
 
 import Container from 'react-bootstrap/Container'
+import { AuthContext } from './context/Auth.context'
 
 function App() {
+  const [user, setUser] = useState({})
+  const value = useMemo(() => ({ user, setUser }), [user])
+
   return (
-      // <main className="App">
-        <Container fluid>
-          <Outlet />
-        </Container>
-      // </main>
+    <AuthContext.Provider value={value}>
+      <Container fluid>
+        <Outlet />
+      </Container>
+    </AuthContext.Provider>
   )
 }
 
