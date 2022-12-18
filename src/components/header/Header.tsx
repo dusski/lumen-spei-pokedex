@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
-import { AuthContext } from '../context/Auth.context'
+import { AuthContext } from '../../context/Auth.context'
 import { Button } from 'react-bootstrap'
 
 function Header() {
