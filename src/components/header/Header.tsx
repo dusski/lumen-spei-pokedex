@@ -7,7 +7,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/Auth.context'
 import { Button } from 'react-bootstrap'
 
-function Header() {
+function Header({ showBackButton = false }: { showBackButton?: boolean }) {
   const navigate = useNavigate()
   const {
     user: { email, firstName },
@@ -17,12 +17,21 @@ function Header() {
 
   const handleLogout = () => {
     setUser({})
-    isUserAuthenticated = false;
+    isUserAuthenticated = false
+  }
+
+  const handleBack = () => {
+    navigate(-1)
   }
 
   return (
     <>
       <Navbar bg="light">
+        {showBackButton && (
+          <Button variant="primary" className="me-3" onClick={() => handleBack()}>
+            Back
+          </Button>
+        )}
         <Navbar.Brand className="navbar-brand" onClick={() => navigate('/')}>
           React-Bootstrap
         </Navbar.Brand>
